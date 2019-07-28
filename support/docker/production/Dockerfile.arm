@@ -19,7 +19,7 @@ fi
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt update \
     && apt install -y apt-utils nano htop curl git build-essential gcc g++ make \
-    && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
     && apt install -yq nodejs \
     && rm -rf /var/lib/apt/lists/ \
     && npm install npm@latest -g && npm install yarn@latest -g
